@@ -7,7 +7,7 @@
  * {{LICENSE}} Licensed.
  */
 
-Module.register("{{MODULE_NAME}}", {
+Module.register("MMM-Screencast", {
 	defaults: {
 		updateInterval: 60000,
 		retryDelay: 5000
@@ -122,7 +122,7 @@ Module.register("{{MODULE_NAME}}", {
 
 	getStyles: function () {
 		return [
-			"{{MODULE_NAME}}.css",
+			"MMM-Screencast.css",
 		];
 	},
 
@@ -143,12 +143,12 @@ Module.register("{{MODULE_NAME}}", {
 
 		// the data if load
 		// send notification to helper
-		this.sendSocketNotification("{{MODULE_NAME}}-NOTIFICATION_TEST", data);
+		this.sendSocketNotification("MMM-Screencast-NOTIFICATION_TEST", data);
 	},
 
 	// socketNotificationReceived from helper
 	socketNotificationReceived: function (notification, payload) {
-		if(notification === "{{MODULE_NAME}}-NOTIFICATION_TEST") {
+		if(notification === "MMM-Screencast-NOTIFICATION_TEST") {
 			// set dataNotification
 			this.dataNotification = payload;
 			this.updateDom();
